@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Caravelle</title>
+    <link rel="stylesheet" href="../Styles/style.css">
+    <script src="../scripts/Jscript.js"></script>
+
+</head>
+
+<body onload="TitreResv();Setup();isConnect()" onchange="fcalcul()" onscroll="fscroll()">
+    <header id="top">
+        <h1><a href="Accueil.html" id="backtohome">Caravelle</a></h1>
+
+    </header>
+    <nav>
+        <ul id="NavBar">
+            <li class="listM"><a href="../Accueil.html">Accueil</a></li>
+            <li class="listM"><a href="Destinations.html">Destinations</a></li>
+            <li class="listM"><a href="Panier.html">Panier</a></li>
+            <li class="listM"><a href="Support_et_Contact.html">Support & Contact</a></li>
+            <li class="listMD"><a href="Template/Connexion.html" id="connexion">Connexion</a></li>
+            <li><button onclick="ButtonDeco()" id="deconnexion">Déconnexion</button></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h1 id="Choix_User">Destination de votre choix</h1>
+    </section>
+    <div>
+        <form id='FormResv' action='Panier.html' method="GET">
+
+            <label for="name">Nom* :</label>
+            <input type="text" id="name" name="user_name" required>
+            <label for="surname">Prénom* :</label>
+            <input type="text" id="surname" name="user_surname" required>
+            <br/>
+            <label for="mail">e-mail* :</label>
+            <input type="email" id="mail" name="user_mail" required>
+            <br/>
+            <label for="tel">Téléphone* :</label>
+            <input type="tel" id="tel" name="user_tel" pattern="[0]{1}[0-9]{9}" required>
+            <br/>
+            <label for="dep">Date de départ* :</label>
+            <input type="date" id="dep" name="user_datedep" required>
+            <br/>
+            <label for="ret">Date de retour* :</label>
+            <input type="date" id="ret" name="user_dateret" required>
+            <br/>
+            <label for="nbadult">Nombre d'adulte(s)* :</label>
+            <input type="number" id="nbadult" name="user_nbradult" min="1" value="0" required>
+            <br/>
+            <label for="nbenf">Nombre d'enfant(s) (-12 ans)* :</label>
+            <input type="number" id="nbenf" name="user_nbenf" min="0" value="0" required>
+            <br/>
+
+            <label for="breakfast">Petit déjeuner</label>
+            <input type="checkbox" id="breakfast" name="user_brkfst">
+            <br/>
+            <label>Commentaire:</label>
+            <br/>
+            <textarea rows="4" cols="50" name="comment" form="FormResv" placeholder="Laissez votre commentaire..."></textarea>
+            <br/>
+            <input type="reset" value="Réinitialiser">
+            <input onclick="validerResa()" id="BoutonEnvoi" type="submit" value="Valider">
+
+        </form>
+
+        <h3 id='Prix_p_J'>Prix du voyage : <i>Remplissez le formulaire</i> </h3>
+
+
+
+    </div>
+
+    <footer>
+        <h2>Notre entreprise</h2>
+        <ul>
+            <li><a href="Non_Disponible.html">A propos</a> </li>
+            <li><a href="Offres_d_emploi.html">Offres d'emploi</a></li>
+            <li><a href="Non_Disponible.html">Mentions légales</a></li>
+            <li><a href="Non_Disponible.html">Blog </a></li>
+
+        </ul>
+    </footer>
+</body>

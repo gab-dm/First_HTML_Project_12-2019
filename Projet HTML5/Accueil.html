@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Caravelle</title>
+    <link rel="stylesheet" href="Styles/style.css">
+    <script src="scripts/Jscript.js"></script>
+
+</head>
+
+<body onscroll="fscroll()" onload="Setup();isConnect()">
+    <header id="top">
+        <h1><a href="Accueil.html" id="backtohome">Caravelle</a></h1>
+    </header>
+    <nav>
+        <ul id="NavBar">
+            <li class="listM"><a href="Accueil.html">Accueil</a></li>
+            <li class="listM"><a href="Template/Destinations.html">Destinations</a></li>
+            <li class="listM"><a href="Template/Panier.html">Panier</a></li>
+            <li class="listM"><a href="Template/Support_et_Contact.html">Support & Contact</a></li>
+            <li class="listMD"><a href="Template/Connexion.html" id="connexion">Connexion</a></li>
+            <li><button onclick="ButtonDeco()" id="deconnexion">Déconnexion</button></li>
+        </ul>
+
+
+        <button onclick="TopPage()" id="topbutton" title="top"> Top</button>
+
+    </nav>
+
+
+    <div id="FormAcc">
+        <form action="Template/Réservation.html" method="GET">
+            <label for="Choix_Destination">Votre prochaine escapade</label>
+            <input name="destination" list="Dests" type="text" id="Choix_Destination" />
+            <datalist id="Dests">
+                <option value="New York">
+                <option value="Le Caire">
+                <option value="Rio de Janeiro">
+                <option value="Tokyo">
+                <option value="Shanghai">
+                <option value="Singapour">
+            </datalist>
+            <input type="submit">
+        </form>
+    </div>
+
+    <div class="H_grid-container">
+        <div class="H_grid-item">
+            <a href="Template/Réservation.html?destination=New+York"><img src="IMG/NYC.jpg" alt="Visitez NYC" />New York</a>
+        </div>
+        <div class="H_grid-item">
+            <a href="Template/Réservation.html?destination=Shanghai"><img src="IMG/Shanghai.jpg" alt="Visitez Shanghai" />Shanghai</a>
+        </div>
+        <div class="H_grid-item">
+            <a href="Template/Réservation.html?destination=Le+Caire"><img src="IMG/Le_caire.jpg" alt="Visitez Le Caire" />Le Caire</a>
+        </div>
+        <div class="H_grid-item">
+            <a href="Template/Réservation.html?destination=Rio+de+Janeiro"><img src="IMG/RIO.jpg" alt="Visitez Rio" />Rio de Janeiro</a>
+        </div>
+        <div class="H_grid-item">
+            <a href="Template/Réservation.html?destination=Tokyo"><img src="IMG/Tokyo.jpg" alt="Visitez Tokyo" />Tokyo</a>
+        </div>
+        <div class="H_grid-item">
+            <a href="Template/Réservation.html?destination=Singapour"><img src="IMG/Singapour.jpg" alt="Visitez Singapour" />Singapour</a>
+        </div>
+    </div>
+
+    <footer>
+        <h2>Notre entreprise</h2>
+        <ul>
+            <li><a href="Template/Non_Disponible.html">A propos</a> </li>
+            <li><a href="Template/Offres_d_emploi.html">Offres d'emploi</a></li>
+            <li><a href="Template/Non_Disponible.html">Mentions légales</a></li>
+            <li><a href="Template/Non_Disponible.html">Blog </a></li>
+
+        </ul>
+    </footer>
+</body>
+
+</html>
